@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class OrderServiceTest {
 
     //MemberService memberService = new MemberServiceImpl();
-    //OrderService orderService = new ();
+    //OrderService orderService = new OrderServiceImpl();
 
     //Appconfig이용한 테스트
     MemberService memberService;

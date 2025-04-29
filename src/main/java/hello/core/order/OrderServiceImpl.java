@@ -13,12 +13,12 @@ public class OrderServiceImpl implements OrderService{
     //private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
     //이 방식은 DIP를 지킨 것은 아니다. 추상(인터페이스)뿐만 아니라 구체(구현)클래스에도 의존하고 있다. DIP위반
-    //또한 서비스임플 소스도 변경해야 하기 때문에 OCP위반
+    //또한 서비스입플 소스도 변경해야 하기 때문에 OCP위반
     // 2) 방법으로 사용해야함.
      */
 
     /* 2)
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository = new MemoryMemberRepository();s
     private DiscountPolicy discountPolicy; //인터페이스만 의존
      */
 
@@ -38,9 +38,5 @@ public class OrderServiceImpl implements OrderService{
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
 
-    }
-
-    public MemberRepository getMemberRepository() {
-        return memberRepository;
     }
 }
