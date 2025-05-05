@@ -18,7 +18,7 @@ public class ComponentFilterAppConfigTest {
         BeanA beanA = ac.getBean("beanA", BeanA.class);
         Assertions.assertThat(beanA).isNotNull();
 
-        BeanB beanb = ac.getBean("beanb", BeanB.class); //얘는 exclude라서 에러나는게 정상
+        BeanB beanb = ac.getBean("beanB", BeanB.class); //얘는 exclude라서 에러나는게 정상
         org.junit.jupiter.api.Assertions.assertThrows(
                 NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("beanB", BeanB.class)
